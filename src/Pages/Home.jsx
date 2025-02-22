@@ -15,7 +15,7 @@ const Home = () => {
             Welcome to My Portfolio 🚀
           </Title>
           <Paragraph style={{ fontSize: "18px", color: "#555" }}>
-            Hi, I'm <b>Gowtham</b>, a passionate web developer skilled in React.js, JavaScript, and modern web technologies.
+            Hi, I'm <b>Gowtham</b>, a passionate web developer skilled in React.js, Jquery, JavaScript, and modern web technologies.
             Explore my work and feel free to reach out!
           </Paragraph>
           <Link to="/projects">
