@@ -52,7 +52,7 @@ const Navigation = () => {
           type="primary"
           icon={<MenuOutlined />}
           onClick={toggleDrawer}
-          style={{ position: "fixed", top: 20, left: 20, zIndex: 1000 }}
+          style={{ position: "fixed", top: 20, left: 20, zIndex: 1000,backgroundColor:"#8597af",padding:"8px 17px" }}
         />
       )}
 
