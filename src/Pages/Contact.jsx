@@ -63,21 +63,33 @@ const Contact = () => {
 
       <Row justify="center" gutter={[16, 16]} style={{ marginTop: "30px" }}>
         <Col xs={24} sm={12} md={8}>
-          <Card hoverable>
+          <Card 
+            hoverable 
+            onClick={() => window.location.href = 'mailto:gowthamramesh1406@gmail.com'}
+            style={{ cursor: 'pointer' }}
+          >
             <MailOutlined style={{ fontSize: "24px", color: "#1890ff" }} />
             <Title level={5}>Email</Title>
             <Paragraph>gowthamramesh1406@gmail.com</Paragraph>
           </Card>
         </Col>
         <Col xs={24} sm={12} md={8}>
-          <Card hoverable>
+          <Card 
+            hoverable 
+            onClick={() => window.location.href = 'tel:+919976985349'}
+            style={{ cursor: 'pointer' }}
+          >
             <PhoneOutlined style={{ fontSize: "24px", color: "#1890ff" }} />
             <Title level={5}>Phone</Title>
             <Paragraph>+91 9976985349</Paragraph>
           </Card>
         </Col>
         <Col xs={24} sm={12} md={8}>
-          <Card hoverable>
+          <Card 
+            hoverable 
+            onClick={() => window.open('https://maps.google.com/?q=Chennai,India', '_blank')}
+            style={{ cursor: 'pointer' }}
+          >
             <EnvironmentOutlined style={{ fontSize: "24px", color: "#1890ff" }} />
             <Title level={5}>Location</Title>
             <Paragraph>Chennai, India</Paragraph>

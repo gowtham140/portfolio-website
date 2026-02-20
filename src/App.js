@@ -5,6 +5,7 @@ import About from './Pages/About';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 import Navigation from './Routers/Navigation';
+import './styles/animations.css';
 
 const App = () => {
   return (

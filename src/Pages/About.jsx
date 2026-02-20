@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Row, Col, Card, Progress, Avatar } from "antd";
+import { Typography, Row, Col, Card, Avatar } from "antd";
 import gowthamImage from '../Images/gowtham.webp';
 
 const { Title, Paragraph } = Typography;
@@ -27,67 +27,139 @@ const About = () => {
   };
 
   return (
-    <div style={{ padding: "50px", background: "#ffffff", minHeight: "100vh" }}>
+    <div style={{ padding: "50px 80px", background: "#ffffff", minHeight: "100vh" }}>
       {/* Header Section */}
-      <Row justify="center">
-        <Col xs={24} sm={20} md={16} lg={12} style={{ textAlign: "center" }}>
+      <Row justify="center" style={{ marginBottom: "50px" }}>
+        <Col xs={24} sm={20} md={18} style={{ textAlign: "center" }}>
           {/* Avatar */}
-          <Avatar size={100} src={gowthamImage} />
-          <Title level={2} style={{ marginTop: "10px", fontWeight: "bold", color: "#1890ff" }}>
+          <Avatar size={120} src={gowthamImage} />
+          <Title level={2} style={{ marginTop: "20px", fontWeight: "bold", color: "#1890ff", fontSize: "36px" }}>
             About Me
           </Title>
-          <Paragraph style={{ fontSize: "16px", color: "#555" }}>
-            Hi, I'm <b>Gowtham</b>, a passionate <b>React.js Developer</b> with experience in building modern web applications.
-            I love creating user-friendly, efficient, and scalable web solutions.
+          <Paragraph style={{ fontSize: "18px", color: "#555", maxWidth: "600px", margin: "0 auto" }}>
+            Hi, I'm <b>Gowtham</b>, a passionate <b>Full-Stack Developer</b> with expertise in building modern, scalable, and user-friendly web applications. With hands-on experience in React.js, Spring Boot, and cloud technologies, I craft efficient solutions that make a real impact.
           </Paragraph>
         </Col>
       </Row>
 
-      {/* Experience & Skills */}
-      <Row justify="center" gutter={[16, 16]} style={{ marginTop: "40px" }}>
+      {/* Main Sections - 3 Columns */}
+      <Row gutter={[24, 24]} justify="start" style={{ marginBottom: "50px" }}>
+        {/* Experience Card */}
         <Col xs={24} sm={12} md={8}>
-          <Card hoverable>
+          <Card hoverable style={{ height: "100%" }}>
             <Title level={4}>💼 Experience</Title>
             <Paragraph>
-               <b>{calculateExperienceDuration()}</b> in Web Development  
-              - Expertise in <b>React.js, JavaScript, and Ant Design</b>  
-              - Backend experience with <b>Spring Boot & MySQL</b>
+              <b>{calculateExperienceDuration()}</b> of professional development experience
+            </Paragraph>
+            <Paragraph style={{ color: "#666" }}>
+              • Full-stack web application development<br/>
+              • Building scalable backend systems<br/>
+              • Enterprise software solutions<br/>
+              • Agile & team collaboration
             </Paragraph>
           </Card>
         </Col>
+
+        {/* Frontend Stack */}
         <Col xs={24} sm={12} md={8}>
-          <Card hoverable>
-            <Title level={4}>🛠 Skills</Title>
-            <Paragraph>
-               <b>Frontend:</b> React.js, JavaScript, HTML, CSS  
-              - <b>Backend:</b> Spring Boot, MySQL  
-              - <b>Tools:</b> Git, VS Code, Ant Design  
+          <Card hoverable style={{ height: "100%" }}>
+            <Title level={4}>⚛️ Frontend Stack</Title>
+            <Paragraph style={{ color: "#666" }}>
+              • <b>React.js</b> - Modern UI development<br/>
+              • <b>JavaScript/ES6+</b> - Core language<br/>
+              • <b>HTML5 & CSS3</b> - Web standards<br/>
+              • <b>Ant Design</b> - UI components<br/>
+              • <b>Responsive Design</b> - Mobile-first
+            </Paragraph>
+          </Card>
+        </Col>
+
+        {/* Backend Stack */}
+        <Col xs={24} sm={12} md={8}>
+          <Card hoverable style={{ height: "100%" }}>
+            <Title level={4}>🔧 Backend Stack</Title>
+            <Paragraph style={{ color: "#666" }}>
+              • <b>Spring Boot</b> - Enterprise apps<br/>
+              • <b>MySQL</b> - Database design<br/>
+              • <b>RESTful APIs</b> - API development<br/>
+              • <b>Stored Procedures</b> - DB optimization<br/>
+              • <b>Java</b> - Core technology
             </Paragraph>
           </Card>
         </Col>
       </Row>
 
-      {/* Skill Progress Bars */}
-      <Row justify="center" gutter={[16, 16]} style={{ marginTop: "40px" }}>
+      {/* Additional Skills - 3 Columns */}
+      <Row gutter={[24, 24]} justify="start" style={{ marginBottom: "50px" }}>
+        {/* Tools & Technologies */}
         <Col xs={24} sm={12} md={8}>
-          <Title level={5}>React.js</Title>
-          <Progress percent={85} />
+          <Card hoverable style={{ height: "100%" }}>
+            <Title level={4}>🛠 Tools & Technologies</Title>
+            <Paragraph style={{ color: "#666" }}>
+              • <b>Git/GitHub</b> - Version control<br/>
+              • <b>VS Code</b> - Code editor<br/>
+              • <b>jQuery</b> - DOM manipulation<br/>
+              • <b>Postman</b> - API testing<br/>
+              • <b>Maven/Gradle</b> - Build tools
+            </Paragraph>
+          </Card>
         </Col>
+
+        {/* DevOps & Deployment */}
         <Col xs={24} sm={12} md={8}>
-          <Title level={5}>JavaScript</Title>
-          <Progress percent={90} />
+          <Card hoverable style={{ height: "100%" }}>
+            <Title level={4}>🚀 DevOps & Deployment</Title>
+            <Paragraph style={{ color: "#666" }}>
+              • <b>Docker</b> - Containerization<br/>
+              • <b>Server Deployment</b> - Linux/Ubuntu<br/>
+              • <b>CI/CD Pipelines</b> - Automation<br/>
+              • <b>Cloud Basics</b> - Deployment strategies<br/>
+              • <b>Performance Optimization</b> - Production ready
+            </Paragraph>
+          </Card>
         </Col>
+
+        {/* Soft Skills */}
         <Col xs={24} sm={12} md={8}>
-          <Title level={5}>Spring Boot</Title>
-          <Progress percent={75} />
+          <Card hoverable style={{ height: "100%" }}>
+            <Title level={4}>🎯 Soft Skills</Title>
+            <Paragraph style={{ color: "#666" }}>
+              • <b>Problem Solving</b> - Analytical thinking<br/>
+              • <b>Team Collaboration</b> - Cross-functional<br/>
+              • <b>Communication</b> - Clear documentation<br/>
+              • <b>Attention to Detail</b> - Quality focused<br/>
+              • <b>Quick Learning</b> - Adaptable to new tech
+            </Paragraph>
+          </Card>
         </Col>
-        <Col xs={24} sm={12} md={8}>
-          <Title level={5}>jQuery</Title>
-          <Progress percent={80} />
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-          <Title level={5}>MySQL</Title>
-          <Progress percent={90} />
+      </Row>
+
+      {/* Key Strengths */}
+      <Row justify="center" style={{ marginBottom: "30px" }}>
+        <Col xs={24} sm={22} md={20} lg={18}>
+          <Card hoverable style={{ background: "#f0f5ff", borderColor: "#1890ff" }}>
+            <Title level={4}>⭐ Key Strengths</Title>
+            <Row gutter={[16, 16]}>
+              <Col xs={24} sm={12} md={8}>
+                <Paragraph>
+                  <b>Full-Stack Capability</b><br/>
+                  <span style={{ color: "#666" }}>Seamless development across frontend and backend with proven expertise in both areas</span>
+                </Paragraph>
+              </Col>
+              <Col xs={24} sm={12} md={8}>
+                <Paragraph>
+                  <b>Scalable Solutions</b><br/>
+                  <span style={{ color: "#666" }}>Design and implement systems that grow with business needs</span>
+                </Paragraph>
+              </Col>
+              <Col xs={24} sm={12} md={8}>
+                <Paragraph>
+                  <b>Production Ready</b><br/>
+                  <span style={{ color: "#666" }}>Experience deploying and maintaining applications in production environments</span>
+                </Paragraph>
+              </Col>
+            </Row>
+          </Card>
         </Col>
       </Row>
     </div>

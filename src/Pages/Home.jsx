@@ -42,8 +42,8 @@ const Home = () => {
         </Col>
         <Col xs={24} sm={12} md={8} lg={6}>
           <Card hoverable style={{ textAlign: "center" }}>
-            <Title level={3}>🎨 UI/UX</Title>
-            <Paragraph>Crafting beautiful and user-friendly designs.</Paragraph>
+            <Title level={3}>🔧 Spring Boot</Title>
+            <Paragraph>Building robust backend systems with strong knowledge of enterprise applications.</Paragraph>
           </Card>
         </Col>
       </Row>
