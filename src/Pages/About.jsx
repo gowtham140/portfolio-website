@@ -1,10 +1,13 @@
-import React from "react";
-import { Typography, Row, Col, Card, Avatar } from "antd";
+import React, { useState } from "react";
+import { Typography, Row, Col, Card, Avatar, Modal } from "antd";
 import gowthamImage from '../Images/gowtham.webp';
 
 const { Title, Paragraph } = Typography;
 
 const About = () => {
+  const [isPreviewVisible, setIsPreviewVisible] = useState(false);
+  const openPreview = () => setIsPreviewVisible(true);
+  const closePreview = () => setIsPreviewVisible(false);
   // Calculate experience duration in years and months since August 2024
   const calculateExperienceDuration = () => {
     const joinDate = new Date(2024, 7, 1); // August 2024
@@ -31,8 +34,13 @@ const About = () => {
       {/* Header Section */}
       <Row justify="center" style={{ marginBottom: "50px" }}>
         <Col xs={24} sm={20} md={18} style={{ textAlign: "center" }}>
-          {/* Avatar */}
-          <Avatar size={120} src={gowthamImage} />
+          {/* Avatar (click to preview) */}
+          <Avatar
+            size={120}
+            src={gowthamImage}
+            style={{ cursor: "pointer" }}
+            onClick={openPreview}
+          />
           <Title level={2} style={{ marginTop: "20px", fontWeight: "bold", color: "#1890ff", fontSize: "36px" }}>
             About Me
           </Title>
@@ -162,6 +170,10 @@ const About = () => {
           </Card>
         </Col>
       </Row>
+      {/* Image preview modal */}
+      <Modal visible={isPreviewVisible} footer={null} onCancel={closePreview} centered>
+        <img src={gowthamImage} alt="Gowtham" style={{ width: "100%", maxWidth: 480, display: "block", margin: "0 auto" }} />
+      </Modal>
     </div>
   );
 };
