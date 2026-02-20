@@ -1,10 +1,31 @@
 import React from "react";
 import { Typography, Row, Col, Card, Progress, Avatar } from "antd";
-import gowthamImage from '../Images/gowtham.jpg';
+import gowthamImage from '../Images/gowtham.webp';
 
 const { Title, Paragraph } = Typography;
 
 const About = () => {
+  // Calculate experience duration in years and months since August 2024
+  const calculateExperienceDuration = () => {
+    const joinDate = new Date(2024, 7, 1); // August 2024
+    const currentDate = new Date();
+    let months = (currentDate.getFullYear() - joinDate.getFullYear()) * 12;
+    months += currentDate.getMonth() - joinDate.getMonth();
+    
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    
+    let duration = '';
+    if (years > 0) {
+      duration += `${years} year${years > 1 ? 's' : ''}`;
+    }
+    if (remainingMonths > 0) {
+      if (duration) duration += ' ';
+      duration += `${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`;
+    }
+    return duration || '0 months';
+  };
+
   return (
     <div style={{ padding: "50px", background: "#ffffff", minHeight: "100vh" }}>
       {/* Header Section */}
@@ -28,7 +49,7 @@ const About = () => {
           <Card hoverable>
             <Title level={4}>💼 Experience</Title>
             <Paragraph>
-               <b>9+ months</b> in Web Development  
+               <b>{calculateExperienceDuration()}</b> in Web Development  
               - Expertise in <b>React.js, JavaScript, and Ant Design</b>  
               - Backend experience with <b>Spring Boot & MySQL</b>
             </Paragraph>
