@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, Col, Row, Button, Typography, Modal } from "antd";
-import { CodeOutlined, EyeOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph } = Typography;
 
