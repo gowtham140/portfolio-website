@@ -12,7 +12,7 @@ import {
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import { Menu, Drawer, Button, Avatar, Tooltip, Space, Divider, Modal } from "antd";
-import gowthamImage from '../Images/profile.jpeg';
+import gowthamImage from '../Images/gowtham.webp';
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {

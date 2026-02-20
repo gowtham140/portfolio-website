@@ -92,9 +92,7 @@ const Contact = () => {
                 <a href="https://www.instagram.com/_.gowtham._14_?igsh=OXJodHg3cDlybmth" target="_blank" rel="noreferrer" aria-label="Instagram">
                   <InstagramOutlined style={{ fontSize: 28, color: '#E4405F' }} />
                 </a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
-                  <FacebookOutlined style={{ fontSize: 28, color: '#1877F2' }} />
-                </a>
+                
                 <a href="https://github.com/gowtham140" target="_blank" rel="noreferrer" aria-label="GitHub">
                   <GithubOutlined style={{ fontSize: 28, color: '#333' }} />
                 </a>
