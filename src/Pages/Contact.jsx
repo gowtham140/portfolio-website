@@ -1,5 +1,5 @@
 import { Form, Input, Button, Row, Col, Card, Typography, message, Space } from "antd";
-import { MailOutlined, PhoneOutlined, EnvironmentOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined, GithubOutlined } from "@ant-design/icons";
+import { MailOutlined, PhoneOutlined, EnvironmentOutlined, InstagramOutlined, LinkedinOutlined,  GithubOutlined } from "@ant-design/icons";
 import emailjs from "@emailjs/browser";
 
 const { Title, Paragraph } = Typography;
