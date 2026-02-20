@@ -98,9 +98,9 @@ const Navigation = () => {
 
           <div style={{ position: 'absolute', bottom: 20, width: collapsed ? 80 : 220, padding: 12 }}>
             <Space direction="horizontal" size={12} style={{ justifyContent: collapsed ? 'center' : 'flex-start', width: '100%' }}>
-              <Tooltip title="LinkedIn"><a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer"><LinkedinOutlined style={{ fontSize: 18, color: '#1890ff' }} /></a></Tooltip>
-              <Tooltip title="GitHub"><a href="https://github.com/gowtham" target="_blank" rel="noreferrer"><GithubOutlined style={{ fontSize: 18 }} /></a></Tooltip>
-              <Tooltip title="Instagram"><a href="https://www.instagram.com/your-instagram" target="_blank" rel="noreferrer"><InstagramOutlined style={{ fontSize: 18, color: '#E4405F' }} /></a></Tooltip>
+              <Tooltip title="LinkedIn"><a href="https://www.linkedin.com/in/gowtham-r-88205723a" target="_blank" rel="noreferrer"><LinkedinOutlined style={{ fontSize: 18, color: '#1890ff' }} /></a></Tooltip>
+              <Tooltip title="GitHub"><a href="https://github.com/gowtham140" target="_blank" rel="noreferrer"><GithubOutlined style={{ fontSize: 18 }} /></a></Tooltip>
+              <Tooltip title="Instagram"><a href="https://www.instagram.com/_.gowtham._14_?igsh=OXJodHg3cDlybmth" target="_blank" rel="noreferrer"><InstagramOutlined style={{ fontSize: 18, color: '#E4405F' }} /></a></Tooltip>
             </Space>
           </div>
         </div>
