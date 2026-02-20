@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Form, Input, Button, Row, Col, Card, Typography, message } from "antd";
 import { MailOutlined, PhoneOutlined, EnvironmentOutlined } from "@ant-design/icons";
 import emailjs from "@emailjs/browser";
