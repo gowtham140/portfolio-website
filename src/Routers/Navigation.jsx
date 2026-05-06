@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from "react";
 import {
-  MenuOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
   ContainerOutlined,
-  MailOutlined,
-  LinkedinOutlined,
+  DesktopOutlined,
   GithubOutlined,
   InstagramOutlined,
+  LinkedinOutlined,
+  MailOutlined,
   MenuFoldOutlined,
+  MenuOutlined,
   MenuUnfoldOutlined,
-  QuestionCircleOutlined,
+  PieChartOutlined
 } from "@ant-design/icons";
-import { Menu, Drawer, Button, Avatar, Tooltip, Space, Divider, Modal } from "antd";
-import gowthamImage from '../Images/gowtham.webp';
+import { Avatar, Button, Divider, Drawer, Menu, Modal, Space, Tooltip } from "antd";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import TourGuide from "../components/TourGuide";
+import gowthamImage from '../Images/gowtham.webp';
+// import TourGuide from "../components/TourGuide";
 
 const Navigation = () => {
   const [collapsed, setCollapsed] = useState(window.innerWidth < 768);
@@ -24,7 +23,7 @@ const Navigation = () => {
   const [selectedKey, setSelectedKey] = useState('1');
   const location = useLocation();
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
-  const [tourOpen, setTourOpen] = useState(false);
+  // const [tourOpen, setTourOpen] = useState(false);
   const openPreview = () => setIsPreviewVisible(true);
   const closePreview = () => setIsPreviewVisible(false);
 
@@ -100,7 +99,7 @@ const Navigation = () => {
           <Menu mode="inline" theme="light" inlineCollapsed={collapsed} selectedKeys={[selectedKey]} items={items} />
 
           {/* Tour Button */}
-          <div style={{ marginTop: 8, marginBottom: 8 }}>
+          {/* <div style={{ marginTop: 8, marginBottom: 8 }}>
             <Button 
               type="default" 
               icon={<QuestionCircleOutlined />} 
@@ -109,7 +108,7 @@ const Navigation = () => {
             >
               {!collapsed && "Start Tour"}
             </Button>
-          </div>
+          </div> */}
 
           <div style={{ position: 'absolute', bottom: 20, width: collapsed ? 80 : 220, padding: 12 }}>
             <Space direction="horizontal" size={12} style={{ justifyContent: collapsed ? 'center' : 'flex-start', width: '100%' }}>
@@ -146,7 +145,7 @@ const Navigation = () => {
       </Modal>
 
       {/* Tour Guide Component */}
-      <TourGuide open={tourOpen} onClose={() => setTourOpen(false)} />
+      {/* <TourGuide open={tourOpen} onClose={() => setTourOpen(false)} /> */}
     </div>
   );
 };
