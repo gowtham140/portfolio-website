@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -8,6 +8,15 @@ import Navigation from './Routers/Navigation';
 import './styles/animations.css';
 
 const App = () => {
+
+
+   useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//code.tidio.co/pxdwj2gpszgo8jcimw21yvodl410mbbg.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <Router>
       <div style={{ display: 'flex' }}>

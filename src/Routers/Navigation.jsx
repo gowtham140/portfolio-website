@@ -10,10 +10,12 @@ import {
   InstagramOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  QuestionCircleOutlined,
 } from "@ant-design/icons";
 import { Menu, Drawer, Button, Avatar, Tooltip, Space, Divider, Modal } from "antd";
 import gowthamImage from '../Images/gowtham.webp';
 import { Link, useLocation } from "react-router-dom";
+import TourGuide from "../components/TourGuide";
 
 const Navigation = () => {
   const [collapsed, setCollapsed] = useState(window.innerWidth < 768);
@@ -22,6 +24,7 @@ const Navigation = () => {
   const [selectedKey, setSelectedKey] = useState('1');
   const location = useLocation();
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
+  const [tourOpen, setTourOpen] = useState(false);
   const openPreview = () => setIsPreviewVisible(true);
   const closePreview = () => setIsPreviewVisible(false);
 
@@ -96,6 +99,18 @@ const Navigation = () => {
 
           <Menu mode="inline" theme="light" inlineCollapsed={collapsed} selectedKeys={[selectedKey]} items={items} />
 
+          {/* Tour Button */}
+          <div style={{ marginTop: 8, marginBottom: 8 }}>
+            <Button 
+              type="default" 
+              icon={<QuestionCircleOutlined />} 
+              onClick={() => setTourOpen(true)}
+              style={{ width: collapsed ? '100%' : '100%', display: 'flex', alignItems: 'center', justifyContent: collapsed ? 'center' : 'flex-start', gap: 8 }}
+            >
+              {!collapsed && "Start Tour"}
+            </Button>
+          </div>
+
           <div style={{ position: 'absolute', bottom: 20, width: collapsed ? 80 : 220, padding: 12 }}>
             <Space direction="horizontal" size={12} style={{ justifyContent: collapsed ? 'center' : 'flex-start', width: '100%' }}>
               <Tooltip title="LinkedIn"><a href="https://www.linkedin.com/in/gowtham-r-88205723a" target="_blank" rel="noreferrer"><LinkedinOutlined style={{ fontSize: 18, color: '#1890ff' }} /></a></Tooltip>
@@ -129,6 +144,9 @@ const Navigation = () => {
       <Modal visible={isPreviewVisible} footer={null} onCancel={closePreview} centered>
         <img src={gowthamImage} alt="Gowtham" style={{ width: '100%', maxWidth: 480, display: 'block', margin: '0 auto' }} />
       </Modal>
+
+      {/* Tour Guide Component */}
+      <TourGuide open={tourOpen} onClose={() => setTourOpen(false)} />
     </div>
   );
 };

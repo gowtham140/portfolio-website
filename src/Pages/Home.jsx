@@ -31,13 +31,13 @@ const Home = () => {
             Currently working on scalable enterprise solutions and improving developer experience.
           </Paragraph>
 
-          <Space size="middle" style={{ marginTop: 16 }}>
+          <Space size="middle" style={{ marginTop: 16 }} className="home-cta">
             <Link to="/projects"><Button type="primary" size="large" icon={<ArrowRightOutlined />}>View Projects</Button></Link>
             <Link to="/contact"><Button size="large">Contact Me</Button></Link>
           </Space>
 
           {/* Statistics */}
-          <Row gutter={[16, 16]} style={{ marginTop: 28 }}>
+          <Row gutter={[16, 16]} style={{ marginTop: 28 }} className="home-statistics">
             <Col xs={8} sm={6}>
               <Card bordered={false} style={{ background: '#fff' }}>
                 <Statistic title="Projects" value={8} />
@@ -71,7 +71,7 @@ const Home = () => {
       </Row>
 
       {/* Skill Tiles */}
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: 40 }}>
+      <Row gutter={[16, 16]} justify="center" style={{ marginTop: 40 }} className="home-skills">
         <Col xs={24} sm={12} md={8} lg={6}>
           <Card hoverable style={{ textAlign: 'center' }}>
             <CodeOutlined style={{ fontSize: 32, color: '#1890ff' }} />
